@@ -1,0 +1,12 @@
+# Ignore virtual environments
+venv/
+venv_windows/
+__pycache__/
+
+# Ignore database files
+*.sqlite3
+*.db
+
+# Ignore other system files
+.DS_Store
+*.log

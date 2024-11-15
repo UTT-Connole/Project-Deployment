@@ -1,0 +1,200 @@
+/* Main container layout */
+.main-container {
+    display: flex;
+    gap: 20px; /* Space between form and list */
+    width: 100%;
+}
+
+/* Recipe item styling */
+.recipe-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Buttons container */
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Button styling for view, edit, and delete */
+.view-btn, .edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+    position: relative;
+}
+
+/* Hover color effects */
+.view-btn:hover {
+    color: #007bff; /* Blue for view */
+}
+
+.edit-btn:hover {
+    color: #4CAF50; /* Green for edit */
+}
+
+.delete-btn:hover {
+    color: #ff2600; /* Red for delete */
+}
+
+/* Recipe list box */
+#recipe-list {
+    flex: 1;
+    width: 100%;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+/* Form container */
+#form-container {
+    flex: 2;
+    max-width: 600px;
+}
+
+/* Overall body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Form styling */
+#recipe-form {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    transition: height 0.2s ease;
+}
+
+/* Input, textarea, and button styling */
+input, textarea, button {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+/* Textarea styling with auto-expand */
+textarea {
+    height: 50px; /* Set the initial height */
+    resize: none; /* Disable manual resizing */
+    transition: height 0.2s ease;
+}
+
+/* Button styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Recipe display section */
+#recipe-display {
+    flex: 2;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.view-btn, .edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 14px; /* Adjusted to make icons smaller */
+    position: relative;
+    padding: 5px; /* Optional: Add padding to control spacing */
+}
+
+.view-btn:hover, .edit-btn:hover, .delete-btn:hover {
+    color: #007bff; /* Change to appropriate color on hover */
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.select-btn, .edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 16px;
+    padding: 5px;
+    transition: color 0.2s;
+}
+
+.select-btn:hover, .edit-btn:hover, .delete-btn:hover {
+    color: #4CAF50; /* Adjust hover color as needed */
+}
+
+.select-btn::before {
+    content: '⭐'; /* Placeholder icon for select */
+}
+
+.edit-btn::before {
+    content: '✏️'; /* Placeholder icon for edit */
+}
+
+.delete-btn::before {
+    content: '🗑️'; /* Placeholder icon for delete */
+}
+
+.recipe-item.dragging {
+    opacity: 0.5;
+}
+
+.recipe-item.over {
+    border: 2px dashed #4CAF50;
+}
+
+.no-recipes-message {
+    font-size: 14px; /* Smaller font size */
+    color: #888888; /* Light gray color */
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <h1>Recipe Manager</h1>
+    <div class="main-container">
+        <section id="recipe-list">
+            <h2>Recipe List</h2>
+        </section>
+        <div id="form-container">
+            <form id="recipe-form">
+                <input type="hidden" id="id" name="id">
+                <h2 id="form-title">Add Recipe</h2>
+                <!-- All input fields -->
+                <input type="text" id="title" name="title" placeholder="Title" required>
+                <textarea id="ingredients" name="ingredients" placeholder="Ingredients" required></textarea>
+                <textarea id="instructions" name="instructions" placeholder="Instructions" required></textarea>
+                <input type="number" id="cook-time" name="cook_time" placeholder="Cook Time (mins)">
+                <input type="number" id="prep-time" name="prep_time" placeholder="Prep Time (mins)">
+                <input type="number" id="servings" name="servings" placeholder="Servings">
+                <input type="text" id="difficulty-level" name="difficulty_level" placeholder="Difficulty Level">
+                <input type="text" id="cuisine" name="cuisine" placeholder="Cuisine">
+                <textarea id="nutrition-facts" name="nutrition_facts" placeholder="Nutrition Facts"></textarea>
+                <input type="number" step="0.1" id="rating" name="rating" placeholder="Rating (0-5)">
+                <button type="submit">Save Recipe</button>
+            </form>
+        </div>
+        <div id="recipe-display">
+            <h2>Selected Recipe</h2>
+            <!-- Selected recipe details will be displayed here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
